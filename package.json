@@ -1,12 +1,12 @@
 {
-  "name":"Node.JS Intro",
+  "name":"zl-node-intro",
   "version":"1.0.0",
   "engines":{
     "node":"0.8.19"
   },
   "devDependencies": {
     "expect.js":"*"
-  }
+  },
   "dependencies": {
     "express":"*"
   }
