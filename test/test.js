@@ -1,8 +1,10 @@
+//adding all of the dependecies
 var app = require("../app"), http = require("http"), expect = require("expect.js");
 
 describe("Tests", function(){
-	var expectedNormalCode = 200, expectedErrorCode = 404, 
+	var expectedNormalCode = 200, expectedErrorCode = 404,
 	expectedVal1 = "hello", expectedVal2 = "world", ErrorResponse = "404 File not found";
+	//option for establishing the http request
 	var options = {
 		hostname: "127.0.0.1",
 		port: 3000,
@@ -11,7 +13,7 @@ describe("Tests", function(){
 	};
 
 	//test the request code first
-	it('GET /hello should return 200',function(done){ 
+	it('GET /hello should return 200',function(done){
       http.get(options, function(res){
 			expect(res.statusCode).to.be(expectedNormalCode);
 			expect(res.statusCode).to.not.be(expectedErrorCode);
@@ -26,7 +28,6 @@ describe("Tests", function(){
 			done();
 		});
 	});
-	
 	it('GET / should return 404',function(done){
 		options.path = '/';
 		http.get(options, function(res){
